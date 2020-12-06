@@ -139,12 +139,12 @@ void test_mtocm(void)
     CU_ASSERT_EQUAL(mtocm(4) , 400);
     CU_ASSERT_EQUAL(mtocm(16) , 1600);
 }
-void test_cos(void)
+void test_cosi(void)
 {
     CU_ASSERT_DOUBLE_EQUAL(cosi(0) , 1, 0);
     CU_ASSERT_DOUBLE_EQUAL(cosi(45) , 0.707107, 0.1);  
 }
-void test_tan(void)
+void test_tang(void)
 {
     CU_ASSERT_DOUBLE_EQUAL(tang(45) , 1, 0.1);
     CU_ASSERT_DOUBLE_EQUAL(tang(90) , 0, 0.1);  
