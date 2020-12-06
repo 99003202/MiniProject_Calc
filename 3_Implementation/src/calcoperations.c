@@ -96,7 +96,7 @@ double sqart(double n1)
 
 int kmtom(int n1)
 {
-   rerurn n1 * 1000;
+   return n1 * 1000;
 }
 
 int mtocm(int n1)
