@@ -99,6 +99,37 @@ int kmtom(int n1)
    rerurn n1 * 1000;
 }
 
+int mtocm(int n1)
+{
+   return n1 * 100;
+}
+
+int ftoi(int n1)
+{
+   return n1 * 12;
+}
+
+int itocm(int n1)
+{
+   return n1 * 2.54;
+}
+
+int cmtom(int operand1)
+{
+   return operand1 * 0.01;
+}
+
+int ytom(int operand1)
+{
+   return operand1 * 0.9144;
+}
+
+int ytocm(int operand1)
+{
+   return operand1 * 91.44;
+}
+
+
 
 
 
