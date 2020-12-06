@@ -1,94 +1,193 @@
-#include "unity.h"
-#include <calculator_operations.h>
+#include <CUnit/Basic.h>
+#include <CUnit/CUnit.h>
+#include <math.h>
 
 /* Modify these two lines according to the project */
-#include <calculator_operations.h>
-#define PROJECT_NAME    "calculator_operations.h"
+#include <calculator.h>
+#define PROJECT_NAME    "Calculator"
 
 /* Prototypes for all the test functions */
-
+void test_add(void);
+void test_sub(void);
+void test_mul(void);
+void test_div(void);
+void test_sqr(void);
+void test_sqart(void);
+void test_sine(void);
+void test_cosi(void);
 void test_kmtom(void);
 void test_mtocm(void);
+void test_tang(void);
+void test_cot(void);
+void test_sec(void);
+void test_cosec(void);
 void test_ftoi(void);
 void test_itocm(void);
 void test_cmtom(void);
 void test_ytom(void);
 void test_ytocm(void);
+void test_mod(void);
 
-/* Required by the unity test framework */
-void setUp(){}
-/* Required by the unity test framework */
-void tearDown(){}
 
-/* Start of the application test */
-int main()
+
+/* Start of the aSpplication test */
+int main() {
+/* Note: Do not edit START*/
+  /*Initialize and setup the Test Framework */
+  if (CUE_SUCCESS != CU_initialize_registry())
+    return CU_get_error();
+  CU_pSuite suite = CU_add_suite(PROJECT_NAME, 0, 0);
+/* Note: Do not edit END */
+
+
+  CU_add_test(suite,"add",test_add);
+  CU_add_test(suite,"substract",test_sub);
+  CU_add_test(suite,"multiply",test_mul);
+  CU_add_test(suite,"divide",test_div);
+  CU_add_test(suite,"square",test_sqr);
+  CU_add_test(suite,"square root",test_sqart);
+  CU_add_test(suite,"sine", test_sine);
+  CU_add_test(suite,"cosine", test_cosi);
+  CU_add_test(suite,"Kilometer_to_meter", test_kmtom);
+  CU_add_test(suite,"meter_to_centimeter", test_mtocm);
+  CU_add_test(suite,"tangent", test_tang);
+  CU_add_test(suite,"cotangent", test_cot);
+  CU_add_test(suite,"secant", test_sec);
+  CU_add_test(suite,"cosecant", test_tang);
+  CU_add_test(suite,"feet_to_inch", test_ftoi);
+  CU_add_test(suite,"inch_to_cm", tes_itocm);
+  CU_add_test(suite,"cm_to_m", test_cmtom);
+  CU_add_test(suite,"yard_to_m", test_ytom);
+  CU_add_test(suite,"yard_to_cm", test_ytocm);
+  CU_add_test(suite,"modulus",test_mod);
+ 
+  
+  
+  
+  
+
+/* Note: Do not edit START*/
+  /* Setup Test Framework to output the result to Screen */
+  CU_basic_set_mode(CU_BRM_VERBOSE);
+
+  /* run the unit test framework*/
+  CU_basic_run_tests();
+
+  /* Cleaning the Resources used by Unit test framework */
+  CU_cleanup_registry();
+/* Note: Do not edit END */
+  return 0;
+}
+
+/* Write all the test functions */
+void test_add(void)
 {
-/* Initiate the Unity Test Framework */
-  UNITY_BEGIN();
-
-/* Run Test functions */
- 
-  RUN_TEST(test_kmtom);
-  RUN_TEST(test_mtocm);
-  RUN_TEST(test_ftoi);
-  RUN_TEST(test_itocm);
-  RUN_TEST(test_cmtom);
-  RUN_TEST(test_ytom);
-  RUN_TEST(test_ytocm);
-
-  /* Close the Unity Test Framework */
-  return UNITY_END();
+    CU_ASSERT_EQUAL(add(1,2), 3);
+    CU_ASSERT_EQUAL(add(0,-3), -3);
 }
 
-/* Write all the test functions */ 
-
-
-void test_kmtom(void) {
-  TEST_ASSERT_EQUAL(1000, kmtom(1));
-  
-    /* Dummy fail*/
-  TEST_ASSERT_EQUAL(1004, kmtom(2));
- }
- 
-void test_mtocm(void) {
-  TEST_ASSERT_EQUAL(200, mtocm(2));
-  
-  
-    /* Dummy fail*/
-  TEST_ASSERT_EQUAL(201, mtocm(1));
- }
- 
-void test_ftoi(void) {
-  TEST_ASSERT_EQUAL(36, ftoi(3));
-  
-   /* Dummy fail*/
-  TEST_ASSERT_EQUAL(37, ftoi(2));
+void test_mul(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(mul(4.21,2), 8.420, 0);
+    CU_ASSERT_DOUBLE_EQUAL(mul(-3.2,2),-6.400,0);
 }
- 
- void test_itocm(void) {
-  TEST_ASSERT_EQUAL(10, itocm(4));
-   
-    /* Dummy fail*/
-  TEST_ASSERT_EQUAL(11, itocm(1));
+void test_div(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(div(6.7,2), 3.350, 0);
+    CU_ASSERT_DOUBLE_EQUAL(div(6.7,0), 0, 0);
+}
+void test_sub(void)
+{
+    CU_ASSERT_EQUAL(sub(6,2), 4);
+    CU_ASSERT_EQUAL(sub(1,2), -1);
 }
 
-void test_cmtom(void) {
-  TEST_ASSERT_EQUAL(0, cmtom(5));
-  
-   /* Dummy fail*/
-  TEST_ASSERT_EQUAL(10, cmtom(3));
+
+void test_sqr(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(sqr(6.7) , 44.89, 0);
+    CU_ASSERT_DOUBLE_EQUAL(sqr(-6.7), 44.89, 0);
 }
 
-void test_ytom(void) {
-  TEST_ASSERT_EQUAL(5, ytom(6));
-  
-   /* Dummy fail*/
-  TEST_ASSERT_EQUAL(5, ytom(1));
+void test_sqart(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(sqart(144) , 12, 0);
+    CU_ASSERT_DOUBLE_EQUAL(sqart(98) , 9.899, 0.1);
+
+}
+
+ void test_mod(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(mod(2) , 10, 8);
+   CU_ASSERT_DOUBLE_EQUAL(mod(5) , 20, 5);
  }
- 
- void test_ytocm(void) {
-  TEST_ASSERT_EQUAL(640, ytocm(7));
-   
-    /* Dummy fail*/
-  TEST_ASSERT_EQUAL(641, ytocm(1));
- }
+
+ void test_sine(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(sine(90) , 1, 0.1);
+    CU_ASSERT_DOUBLE_EQUAL(sine(0) , 0, 0.1);
+}
+
+void test_kmtom(void)
+{
+    CU_ASSERT_EQUAL(kmtom(4) , 4000, 0);
+    CU_ASSERT_EQUAL(kmtom(8) , 8000, 0);
+
+}
+void test_mtocm(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(mtocm(4) , 400, 0);
+    CU_ASSERT_DOUBLE_EQUAL(mtocm(16) , 1600, 0);
+}
+void test_cos(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(cosine(0) , 1, 0);
+    CU_ASSERT_DOUBLE_EQUAL(cosine(45) , 0.707107, 0.1);  
+}
+void test_tan(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(tang(45) , 1, 0.1);
+    CU_ASSERT_DOUBLE_EQUAL(tang(90) , 0, 0.1);  
+}
+void test_cot(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(cot(45) , 1, 0.1);
+    CU_ASSERT_DOUBLE_EQUAL(cot(90) , 0, 0.1);
+}
+void test_sec(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(sec(0) , 1, 0.1);
+    CU_ASSERT_DOUBLE_EQUAL(sec(45) , 1.414214, 0.1);
+}
+void test_cosec(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(cosec(45) , 1.414214, 0.1);
+    CU_ASSERT_DOUBLE_EQUAL(cosec(90) , 1, 0.1);
+}
+void test_ftoi(void)
+{
+    CU_ASSERT_DOUBLE_EQUAL(ftoi(2) , 24, 0);
+    CU_ASSERT_DOUBLE_EQUAL(ftoi(8) , 96, 0);
+}
+void test_itocm(void)
+{
+    CU_ASSERT_EQUAL(itocm(2) , 5, 0);
+    CU_ASSERT_EQUAL(itocm(5) , 12, 0);
+}
+void test_cmtom(void)
+{
+    CU_ASSERT_EQUAL(cmtom(100) , 1, 0);
+    CU_ASSERT_EQUAL(itocm(400) , 4, 0);
+}
+void test_ytom(void)
+{
+    CU_ASSERT_EQUAL(ytom(10) , 9, 0);
+    CU_ASSERT_EQUAL(ytom(15) , 13, 0);
+}
+void test_ytocm(void)
+{
+    CU_ASSERT_EQUAL(ytocm(5) , 457, 0);
+    CU_ASSERT_EQUAL(ytocm(2) , 182, 0);
+}
+}
+
