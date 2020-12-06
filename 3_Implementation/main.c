@@ -112,49 +112,49 @@ int main()
             default:printf("\n Invalid Entry");
           switch(c2)
           {
-           case 1:{int num2;
+           case 1:{int num2,num1;
                    printf("enter value in km");
                    scanf("%d",&num1);
                    num2=kmtom(num1);
                    printf("%d",num2);
                    break;
                   }
-           case 2:{int num2;
+           case 2:{int num2,num1;
                    printf("enter value in cm");
                    scanf("%d",&num1);
                    num2=mtocm(num1);
                    printf("%d",num2);
                    break;
                   }
-           case 3:{int num2;
+           case 3:{int num2,num1;
                    printf("enter value in f");
                    scanf("%d",&num1);
                    num2=ftoi(num1);
                    printf("%d",num2);
                    break;
                   }
-           case 4:{int num2;
+           case 4:{int num2,num1;
                    printf("enter value in i");
                    scanf("%d",&num1);
                    num2=itocm(num1);
                    printf("%d",num2);
                    break;
                   }
-           case 5:{int num2;
+           case 5:{int num2,num1;
                    printf("enter value in cm");
                    scanf("%d",&num1);
                    num2=cmtom(num1);
                    printf("%d",num2);
                    break;
                   }
-           case 6:{int num2;
+           case 6:{int num2,num1;
                    printf("enter value in y");
                    scanf("%d",&num1);
                    num2=ytom(num1);
                    printf("%d",num2);
                    break;
                   }
-           case 7:{int num2;
+           case 7:{int num2,num1;
                    printf("enter value in y");
                    scanf("%d",&num1);
                    num2=ytocm(num1);
