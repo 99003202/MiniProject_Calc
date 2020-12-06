@@ -3,7 +3,7 @@
 #include <math.h>
 
 /* Modify these two lines according to the project */
-#include <calculator.h>
+#include <calc.h>
 #define PROJECT_NAME    "Calculator"
 
 /* Prototypes for all the test functions */
