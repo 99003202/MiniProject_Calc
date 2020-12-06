@@ -136,18 +136,18 @@ void test_kmtom(void)
 }
 void test_mtocm(void)
 {
-    CU_ASSERT_DOUBLE_EQUAL(mtocm(4) , 400);
-    CU_ASSERT_DOUBLE_EQUAL(mtocm(16) , 1600);
+    CU_ASSERT_EQUAL(mtocm(4) , 400);
+    CU_ASSERT_EQUAL(mtocm(16) , 1600);
 }
 void test_cos(void)
 {
-    CU_ASSERT_DOUBLE_EQUAL(cosine(0) , 1, 0);
-    CU_ASSERT_DOUBLE_EQUAL(cosine(45) , 0.707107, 0.1);  
+    CU_ASSERT_DOUBLE_EQUAL(cosi(0) , 1, 0);
+    CU_ASSERT_DOUBLE_EQUAL(cosi(45) , 0.707107, 0.1);  
 }
 void test_tan(void)
 {
-    CU_ASSERT_DOUBLE_EQUAL(tang(45) , 1, 0.1);
-    CU_ASSERT_DOUBLE_EQUAL(tang(90) , 0, 0.1);  
+    CU_ASSERT_EQUAL(tang(45) , 1, 0.1);
+    CU_ASSERT_EQUAL(tang(90) , 0, 0.1);  
 }
 void test_cot(void)
 {
@@ -166,8 +166,8 @@ void test_cosec(void)
 }
 void test_ftoi(void)
 {
-    CU_ASSERT_DOUBLE_EQUAL(ftoi(2) , 24);
-    CU_ASSERT_DOUBLE_EQUAL(ftoi(8) , 96);
+    CU_ASSERT_EQUAL(ftoi(2) , 24);
+    CU_ASSERT_EQUAL(ftoi(8) , 96);
 }
 void test_itocm(void)
 {
@@ -189,5 +189,5 @@ void test_ytocm(void)
     CU_ASSERT_EQUAL(ytocm(5) , 457);
     CU_ASSERT_EQUAL(ytocm(2) , 182);
 }
-}
+
 
