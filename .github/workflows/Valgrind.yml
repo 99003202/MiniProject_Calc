@@ -1,13 +1,10 @@
 name: Valgrind
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
   build:
+    name: Valgrind
 
     runs-on: ubuntu-latest
 
