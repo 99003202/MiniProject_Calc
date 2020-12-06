@@ -146,8 +146,8 @@ void test_cos(void)
 }
 void test_tan(void)
 {
-    CU_ASSERT_EQUAL(tang(45) , 1, 0.1);
-    CU_ASSERT_EQUAL(tang(90) , 0, 0.1);  
+    CU_ASSERT_DOUBLE_EQUAL(tang(45) , 1, 0.1);
+    CU_ASSERT_DOUBLE_EQUAL(tang(90) , 0, 0.1);  
 }
 void test_cot(void)
 {
