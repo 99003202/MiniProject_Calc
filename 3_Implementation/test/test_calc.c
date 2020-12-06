@@ -55,7 +55,7 @@ int main() {
   CU_add_test(suite,"secant", test_sec);
   CU_add_test(suite,"cosecant", test_tang);
   CU_add_test(suite,"feet_to_inch", test_ftoi);
-  CU_add_test(suite,"inch_to_cm", tes_itocm);
+  CU_add_test(suite,"inch_to_cm", test_itocm);
   CU_add_test(suite,"cm_to_m", test_cmtom);
   CU_add_test(suite,"yard_to_m", test_ytom);
   CU_add_test(suite,"yard_to_cm", test_ytocm);
@@ -118,8 +118,8 @@ void test_sqart(void)
 
  void test_mod(void)
 {
-    CU_ASSERT_DOUBLE_EQUAL(mod(2) , 10, 8);
-   CU_ASSERT_DOUBLE_EQUAL(mod(5) , 20, 5);
+    CU_ASSERT_DOUBLE_EQUAL(mod(10,8) , 2, 0);
+   CU_ASSERT_DOUBLE_EQUAL(mod(18,5) , 3, 0);
  }
 
  void test_sine(void)
@@ -130,14 +130,14 @@ void test_sqart(void)
 
 void test_kmtom(void)
 {
-    CU_ASSERT_EQUAL(kmtom(4) , 4000, 0);
-    CU_ASSERT_EQUAL(kmtom(8) , 8000, 0);
+    CU_ASSERT_EQUAL(kmtom(4) , 4000);
+    CU_ASSERT_EQUAL(kmtom(8) , 8000);
 
 }
 void test_mtocm(void)
 {
-    CU_ASSERT_DOUBLE_EQUAL(mtocm(4) , 400, 0);
-    CU_ASSERT_DOUBLE_EQUAL(mtocm(16) , 1600, 0);
+    CU_ASSERT_DOUBLE_EQUAL(mtocm(4) , 400);
+    CU_ASSERT_DOUBLE_EQUAL(mtocm(16) , 1600);
 }
 void test_cos(void)
 {
@@ -166,28 +166,28 @@ void test_cosec(void)
 }
 void test_ftoi(void)
 {
-    CU_ASSERT_DOUBLE_EQUAL(ftoi(2) , 24, 0);
-    CU_ASSERT_DOUBLE_EQUAL(ftoi(8) , 96, 0);
+    CU_ASSERT_DOUBLE_EQUAL(ftoi(2) , 24);
+    CU_ASSERT_DOUBLE_EQUAL(ftoi(8) , 96);
 }
 void test_itocm(void)
 {
-    CU_ASSERT_EQUAL(itocm(2) , 5, 0);
-    CU_ASSERT_EQUAL(itocm(5) , 12, 0);
+    CU_ASSERT_EQUAL(itocm(2) , 5);
+    CU_ASSERT_EQUAL(itocm(5) , 12);
 }
 void test_cmtom(void)
 {
-    CU_ASSERT_EQUAL(cmtom(100) , 1, 0);
-    CU_ASSERT_EQUAL(itocm(400) , 4, 0);
+    CU_ASSERT_EQUAL(cmtom(100) , 1);
+    CU_ASSERT_EQUAL(itocm(400) , 4);
 }
 void test_ytom(void)
 {
-    CU_ASSERT_EQUAL(ytom(10) , 9, 0);
-    CU_ASSERT_EQUAL(ytom(15) , 13, 0);
+    CU_ASSERT_EQUAL(ytom(10) , 9);
+    CU_ASSERT_EQUAL(ytom(15) , 13);
 }
 void test_ytocm(void)
 {
-    CU_ASSERT_EQUAL(ytocm(5) , 457, 0);
-    CU_ASSERT_EQUAL(ytocm(2) , 182, 0);
+    CU_ASSERT_EQUAL(ytocm(5) , 457);
+    CU_ASSERT_EQUAL(ytocm(2) , 182);
 }
 }
 
