@@ -94,6 +94,12 @@ double sqart(double n1)
     return ans;
 }
 
+int kmtom(int n1)
+{
+   rerurn n1 * 1000;
+}
+
+
 
 
 
