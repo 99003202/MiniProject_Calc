@@ -14,5 +14,12 @@ double sec(double);
 double cosec(double);
 double sqr(double);
 double sqart(double);
+int kmtom(int);
+int mtocm(int);
+int ftoi(int);
+int itocm(int);
+int cmtom(int)
+int ytom(int);
+int ytocm(int);
 
 #endif
