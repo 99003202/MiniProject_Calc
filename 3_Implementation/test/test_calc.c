@@ -94,7 +94,7 @@ void test_mul(void)
 void test_div(void)
 {
     CU_ASSERT_DOUBLE_EQUAL(div(6.7,2), 3.350, 0);
-    CU_ASSERT_DOUBLE_EQUAL(div(6.7,0), 0, 0);
+    CU_ASSERT_DOUBLE_EQUAL(div(60,3), 20, 0);
 }
 void test_sub(void)
 {
@@ -147,7 +147,7 @@ void test_cosi(void)
 void test_tang(void)
 {
     CU_ASSERT_DOUBLE_EQUAL(tang(45) , 1, 0.1);
-    CU_ASSERT_DOUBLE_EQUAL(tang(90) , 0, 0.1);  
+    CU_ASSERT_DOUBLE_EQUAL(tang(0) , 0, 0.1);  
 }
 void test_cot(void)
 {
@@ -177,7 +177,7 @@ void test_itocm(void)
 void test_cmtom(void)
 {
     CU_ASSERT_EQUAL(cmtom(100) , 1);
-    CU_ASSERT_EQUAL(itocm(400) , 4);
+    CU_ASSERT_EQUAL(cmtom(400) , 4);
 }
 void test_ytom(void)
 {
