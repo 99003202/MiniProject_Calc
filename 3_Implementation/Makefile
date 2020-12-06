@@ -10,7 +10,7 @@ src/calcoperations.c\
 
 # All test source files
 TEST_SRC = src/calcoperations.c\
-test/test.c\
+test/test_calc.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
