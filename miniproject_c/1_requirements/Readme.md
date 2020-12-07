@@ -26,6 +26,7 @@ Strength
 •	Solve complicated problems
 •	Consumes less time
 •	Inexpensive to maintain  
+
 weakness
 •	For scientific calculators it is difficult read user manual.
 •	Small mistakes give the whole answer wrong and needs recheck.
