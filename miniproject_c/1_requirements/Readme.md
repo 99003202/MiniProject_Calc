@@ -7,15 +7,20 @@ The project is to build calculator software that performs arithmetic operations 
 At the time of starting of calculator these were made with solid state electronic devices.
 As the time went electronic calculators came into existence and calculators with microprocessors
 During those days the calculators costs hundreds of dollers per piece, As the technology goes on the cost of the calculators become low.
+
  2.2 4W1H
 What?
 A calculator is a device to use for the mathematical calculation, which makes work much easier.
+
 When?
 When the calculations to be made are complicated and take more time.
+
 Where?
 Where the calculations become complex to handle manually.
+
 Why?
 To make the complexity of the work less and to save time.
+
 How?
 Calculators are made depending on requirement. Different types of calculators are available such as simple calculator, scientific, graphical and printing calculators.
 
