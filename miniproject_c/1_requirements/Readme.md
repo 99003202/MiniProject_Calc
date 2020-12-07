@@ -30,6 +30,7 @@ weakness
 •	For scientific calculators it is difficult read user manual.
 •	Small mistakes give the whole answer wrong and needs recheck.
 •	The size of number entered is limited.
+
 Opportunity 
 •	Calculators can be developed further scientifically with less complexities for user.
 
